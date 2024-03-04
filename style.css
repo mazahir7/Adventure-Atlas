@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@400;500;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* changes the 1REM from 16px to 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#map {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.form-btn {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #000;
+  z-index: 9999;
+  margin: 1rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form-btn .line {
+  width: 4.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.line-2 {
+  margin: 5px 0;
+}
+
+.form-btn:hover .line-2 {
+  margin: 7px 0;
+}
+
+.form-btn.active .line-2 {
+  opacity: 0;
+}
+
+.form-btn.active .line {
+  position: absolute;
+}
+
+.form-btn.active .line-1 {
+  transform: rotate(135deg);
+}
+
+.form-btn.active .line-3 {
+  transform: rotate(-135deg);
+}
+/* leaf let style changes */
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding-right: 0.6rem;
+  overflow: hidden;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  padding: 4px 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+  scrollbar-width: none;
+  /* animation: scrollLeftRight 4s linear infinite alternate; */
+}
+
+@keyframes scrollLeftRight {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: #000;
+}
+
+.leaflet-popup-content-wrapper {
+  border-left: 5px solid red;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #fff;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: #fff;
+}
+/* .destination-popup div:first-child {
+  font-size: 2rem;
+  background-color: #333;
+  color: #fff;
+  padding: 1px 30px;
+} */
